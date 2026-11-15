@@ -284,6 +284,19 @@ footer .names-s{font-size:32px}
 .verse{white-space:normal;font-size:clamp(19px,5.4vw,23px);line-height:2.15;margin:6px 0 2px}
 .verse-ref{font-family:'Amiri',serif;font-size:15px;color:var(--muted)}
 .inv-text .groom{display:block;font-family:'Amiri',serif;font-size:26px;font-weight:700;line-height:1.8;margin-top:4px}
+
+/* ===== bigger, glowing action hints ===== */
+@keyframes glowpulse{0%,100%{box-shadow:0 0 0 0 rgba(241,212,136,.6),0 0 16px rgba(241,212,136,.55)}50%{box-shadow:0 0 0 14px rgba(241,212,136,0),0 0 36px rgba(241,212,136,.95)}}
+@keyframes starglow{0%,100%{filter:drop-shadow(0 0 8px rgba(241,212,136,.7));transform:scale(.92) rotate(0)}50%{filter:drop-shadow(0 0 26px rgba(241,212,136,1));transform:scale(1.18) rotate(45deg)}}
+.i-start{gap:26px}
+.i-start svg{width:78px;height:78px;animation:starglow 2s ease-in-out infinite}
+.i-start span,.i-tap span{display:inline-block;font-size:clamp(20px,5.8vw,24px);font-weight:700;letter-spacing:.5px;color:#fff3cf;background:rgba(60,16,30,.75);
+  border:2px solid #e2c27a;border-radius:40px;padding:15px 34px;opacity:1;animation:glowpulse 1.8s ease-in-out infinite;white-space:nowrap}
+.i-tap{font-size:inherit;bottom:34px;bottom:calc(4.5vh + env(safe-area-inset-bottom))}
+.scroll-hint{font-size:clamp(18px,5.2vw,21px);font-weight:700;color:#fff3cf;background:rgba(60,16,30,.75);border:2px solid #e2c27a;border-radius:40px;
+  padding:9px 24px 5px;gap:0;bottom:18px;animation:bob 1.6s ease-in-out infinite,glowpulse 1.8s ease-in-out infinite;white-space:nowrap}
+.scroll-hint svg{width:26px;height:26px;stroke-width:2.4}
+.i-skip{font-size:15px;padding:9px 18px}
 </style>
 </head>
 <body class="locked">
